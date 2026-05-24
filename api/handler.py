@@ -159,7 +159,7 @@ async def run_scenario(prompt: str) -> dict[str, Any]:
 
         collected_events.append({
             "type": event.type.value.replace("_", " ").title(),
-            "detail": json.dumps(event.payload, default=str)[:150],
+            "detail": json.dumps(event.payload, default=str),
             "status": status,
         })
 
